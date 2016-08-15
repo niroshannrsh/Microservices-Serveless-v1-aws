@@ -1,1 +1,2 @@
-# sserverless-beta-nodejs-dynamodb-learn
+# serverless-beta-nodejs-dynamodb-learn
+This is serverless-beta starter application 
