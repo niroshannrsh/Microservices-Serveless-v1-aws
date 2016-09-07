@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: aws-nodejs # NOTE: update this with your service name
+service: new-interns-lambda # NOTE: update this with your service name
 
 provider:
   name: aws
@@ -31,17 +31,26 @@ provider:
 #  artifact: my-service-code.zip
 
 functions:
-  hello:
-    handler: handler.hello
+  Users:
+    handler: handler.users
 
-
+#   you can add any of the following events
     events:
       - http:
-          path: users/create
+          path: users/getUsers
           method: get
-#     - s3: ${bucket}
-#     - schedule: rate(10 minutes)
-#     - sns: greeter-topic
+      - http:
+          path: users/createUser
+          method: post
+      - http:
+          path: users/updateUser
+          method: post
+      - http:
+          path: users/getUser
+          method: get
+
+
+
 
 # you can add CloudFormation resource templates here
 #resources:
