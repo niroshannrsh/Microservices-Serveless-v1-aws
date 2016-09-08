@@ -39,6 +39,7 @@ functions:
       - http:
           path: users/getUsers
           method: get
+
       - http:
           path: users/createUser
           method: post
