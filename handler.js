@@ -4,7 +4,7 @@ module.exports.users = function(event, context) {
 
   if(event.path === 'users/getUsers' && event.method === 'GET') {
   	//context.succeed('get users');
-    use.getUsers(event);
+    use.getUsers(event,context);
 
   } else if(event.path === 'users/createUser' && event.method === 'POST') {
   	use.getUsers(event);
@@ -15,9 +15,8 @@ module.exports.users = function(event, context) {
     //user.postUser(context);
 
   } else if(event.path === 'users/getUser' && event.method === 'GET'){
-  	use.getUsers(event);
+  	use.getUser(event);
      //user.getUsers(context);;
   }
 
 };
-
