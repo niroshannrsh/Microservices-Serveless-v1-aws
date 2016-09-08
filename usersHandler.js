@@ -6,16 +6,16 @@ module.exports.users = function(event, context) {
     user.getUsers(event,context);
 
   } else if(event.path === '/users/createUser' && event.method === 'POST') {
-  	user.getUsers(event,context);
+  	user.createUser(event,context);
 
   } else if(event.path === '/users/updateUser' && event.method === 'POST') {
-  	user.getUsers(event,context);
+  	user.updateUser(event,context);
 
   } else if(event.path === '/users/getUser' && event.method === 'GET'){
   	user.getUser(event,context);
   }
   else{
-    context.error("path not found!");
+    context.succeed("path not found!");
   }
 
 };

@@ -32,7 +32,7 @@ provider:
 
 functions:
   Users:
-    handler: handler.users
+    handler: usersHandler.users
 
 #   you can add any of the following events
     events:
@@ -49,6 +49,25 @@ functions:
       - http:
           path: users/getUser
           method: get
+
+  Tasks:
+    handler: tasksHandler.tasks
+    events:
+      - http:
+          path: tasks/getAllActiveTask
+          method: get
+      - http:
+          path: tasks/getUserTask
+          method: post
+      - http:
+          path: tasks/updateTaskAdmin
+          method: post
+      - http:
+          path: tasks/createTaskAdmin
+          method: post
+      - http:
+          path: tasks/updateTaskUser
+          method: post
 
 
 
