@@ -39,7 +39,6 @@ functions:
       - http:
           path: users/getUsers
           method: get
-
       - http:
           path: users/createUser
           method: post
@@ -48,7 +47,7 @@ functions:
           method: post
       - http:
           path: users/getUser
-          method: get
+          method: post
 
   Tasks:
     handler: tasksHandler.tasks
